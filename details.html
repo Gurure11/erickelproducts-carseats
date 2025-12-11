@@ -1,255 +1,240 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Erickel Products</title>
-	<!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<title>Erickel Products & Projects | Premium Car Seat Covers</title>
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MCM4RRMF7"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5MCM4RRMF7');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-5MCM4RRMF7");
 </script>
-	<style type="text/css">
-		#home{
-			background-color: blue;
-			color: white;
-			margin-right: 12px;
-			text-align: center;
-			align-items: center;
-		}
-		#contacts{
-			background-color: blue;
-			color: white;
-			margin-right: 12px;
-			text-align: center;
-			align-items: center;
 
-		}
-		#main-body{
-			align-items: center;
-			text-align: center;
-			color: grey;
-			text-decoration-style: none;
-		}
-		#products{
-			background-color: blue;
-			color: white;
-			margin-right: 12px;
-			text-align: center;
-			align-items: center;
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght:300;400;600;700&display=swap" rel="stylesheet">
 
-		}
-		#main-head{
-			text-decoration: underline;
-		}
-		#z{
-			width: 300px;
-			border-radius: 150px;
-		}
-		#profile:hover{
-			color: red;
-			background-color: grey;
-			cursor: pointer;
-			
-		}
-		#za{
-			width: 400px;
-			border-radius: 5px;
-			height: 700px;
-		}
-		#ze{
-			width: 400px;
-			border-radius: 5px;
-			height: 700px;
-		}
-		#zi{
-			width: 400px;
-			border-radius: 5px;
-		}
-		#zo{
-			width: 400px;
-			border-radius: 5px;
-		}
-		#ya{
-			width: 400px;
-			border-radius: 5px;
-		}
-		#xa{
-			width:400px;
-			border-radius: 5px;
-		}
-		#xe{
-			width: 400px;
-			border-radius: 5px;
-		}
-		#xi{
-			width: 400px;
-			border-radius: 5px;
-		}
-		#xo{
-			width: 400px;
-			border-radius: 5px;
-			height: 700px;
-		}
-		#xu{
-			width: 400px;
-			border-radius: 5px;
-			height: 700px;
-		}
-		li{
-			list-style: none;
-		}
-		#tube:hover{
-			background-color: blue;
-			opacity: 0.7;
-			cursor: pointer;
-			color: white;
-		}
-		h1{
-			color: white;
-			background-color: black;
-			text-decoration: underline;
-		}
-		h2{
-		     font-size: 30px;
-			background-color: black;
-			color: white;
-		}
-	
-		
-	</style>
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ---------------- GENERAL PAGE STYLES ---------------- */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: linear-gradient(-45deg, #6a00f4, #4f11c9, #2d1a6b, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3 {
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+p, li {
+    color: white;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ---------------- NAVIGATION BAR ---------------- */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    background: #ffffff22;
+    backdrop-filter: blur(5px);
+    padding: 10px 18px;
+    margin: 10px;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #ff00ea;
+    transform: scale(1.1);
+}
+
+/* ---------------- PROFILE IMAGE ---------------- */
+#z {
+    width: 250px;
+    border-radius: 125px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px #ffffff90;
+}
+
+/* ---------------- SECTION BOXES ---------------- */
+section {
+    width: 85%;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px #00000040;
+}
+
+/* ---------------- GALLERY GRID ---------------- */
+.gallery-grid {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: 0 0 15px #00000060;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff00ea;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+    background: #00000080;
+    font-size: 15px;
+}
+</style>
 </head>
-<body id="main-body">
-	<h1 id="main-head">ERICKEL PRODUCTS & PROJECTS</h1><br>
-	<hr>
-	<br>
-	<br>
-	<a id="home" href="index.html">Home Page</a>
-	<a id="contacts" href="contacts.html">Contacts</a>
-	<a id="products" href="products.html">Our Products</a>
-	<br>
-	<br>
-	<br>
-	<img id="z" src="images/z.jpg">
-	<br>
-	<br>
+<body>
 
-	<p>
+<h1>ERICKEL PRODUCTS & PROJECTS</h1>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="products.html">Our Products</a>
+</nav>
 
+<img id="z" src="images/z.jpg" alt="Company Founder Photo">
 
-<strong>About Us</strong><br>
-<br>
-Erickel Product & Projects is a top-notch car seat covers manufacturing business, which was established in 2010. The business was founded by a car <br>enthusiast who understood the problems associated with car seats. He noticed that many car owners struggle to find seat covers that not only <br> are pleasing to the eye but also offer durable protection against challenges associated with upholstery damage.<br>
+<section>
+<h2>About Us</h2>
+<p>
+Erickel Product & Projects is a premium car seat cover manufacturing business, established in 2010 by a car enthusiast who saw the need for stylish, durable, and professionally fitted seat covers.
+<br><br>
+Our seat covers redefine luxury, comfort, durability and protection. Over the years we’ve grown into a respected industry leader known for premium workmanship, customer satisfaction and customized solutions.
+</p>
+</section>
 
-Our product gives new definition to luxury, comfortability,d urability and protection as we source our material from top factories and we <br> constantly bet on our workmanship, due to this our car seat covers have proven their inability to fail our clients. Over the years, we <br> have grown to become the preferred in our industry and we take pride in our ability to customize our seat covers to meet the specific <br> needs of every customer at competitive prices.<br>
-<br>
-<br>
+<section>
+<h2>Mission Statement</h2>
+<p>
+To deliver high-quality car seat covers that exceed expectations in comfort, style and long-term seat protection.
+</p>
 
-<h2>Mission statement</h2><br>
-<br>
-Erickel Product & Projects aims to respond to each customer's requirement of high-quality car seat covers that enhance the comfort, style, and protection <br> of their seats beyond expectation. <br>
-<br>
+<h2>Vision</h2>
+<p>
+We strive to grow into a global enterprise by pushing innovation in materials, designs, and safety-focused features. Our long-term vision includes expanding to international markets through reliable global partnerships.
+</p>
 
-<h2>Vision</h2><br>
-<br>
-<br>
-The vision of becoming a lucrative large enterprise has always been the core of our business model. Our plan is to aggressively bring <br>innovation to our products by constantly exploring new materials, designs and features to enhance the car seat covers' functionality, <br>safety and convenience as this is vital for staying ahead of the competition. Apart from providing further value addition to our<br>existing customers, we plan to empower our ability to reach even far markets globally by partnering with reliable partners across <br>
-the world to ensure our services are served in a high quality standard all over the markets. <br>
-<br>
-<br>
+<h2>Products & Services</h2>
+<p>
+Erickel Products & Projects offers a wide range of seat covers for all vehicle models: small cars, SUVs, bakkies, trucks, buses, and more.
+</p>
 
-<h2>Product/ Service</h2><br>
-<br>
-<br>
-		<a id="tube" href="https://youtu.be/ZoT4XF0Jx7M">Link to our You tube</a><br>
-		<br>
-Erickel Product & Projects offers a range of car seat covers that are designed to fit different types of vehicles. With various premium-grade <br>materials to choose from our products include:<br>
-<br>
 <ul>
- <li>Both custom and universal fit car seat covers that are tailored to fit specific models and makes of all vehicles<br>
-(Small cars, Trucks, SUV's, Buses and etc).</li>
-<li>Seat covers that protect your cars upholstery from scratches, stains, wear and tear.</li>
-<li>Waterproof seat covers which is the perfect solution against liquid spills.</li>
-<li>Refurbishing and renewal of old car seats upholstery. We also offer installation services for our car seat covers.<br>
-Our team of experienced technicians can install the covers for you to ensure a perfect fit and a professional finish.</li>
+<li>Custom and universal-fit seat covers</li>
+<li>Premium waterproof designs</li>
+<li>Upholstery refurbishment & renewal</li>
+<li>Professional installation</li>
 </ul>
 
-<h2>Objectives</h2><br>
-<br>
-<br>
+<a href="https://youtu.be/ZoT4XF0Jx7M" target="_blank" style="color:#ff73ff; font-size:20px; font-weight:bold;">▶ Watch our YouTube Video</a>
+
+<h2>Objectives</h2>
 <ul>
-<li>To build a strong brand that is recognized for its luxury quality, reliability and customer service.</li>
-<li>To expand the customer base by reaching out to new customers and also retaining existing ones.</li>
-<li>Meet customers preferences & expectations.</li>
-<li>Aggressively maximize profitability without compromising the quality of our products.</li>
-<li>Bring an innovative aspect to the business.</li>
-</ul><br>
-<br>
-<h2>Target Market</h2><br>
-<br>
-<br>
-We don't have a categorized target market as we cater for all sorts of vehicles. Our customers range from individuals who are looking <br> to upgrade their car's interior to business owners that need to protect their fleet vehicles (mostly buses and trucks) from upholstery <br>damage. <br>
-<br>
-<br>
+<li>Build a premium brand</li>
+<li>Grow customer base and retain clients</li>
+<li>Meet customer expectations</li>
+<li>Maximize profitability without losing quality</li>
+<li>Drive continuous innovation</li>
+</ul>
 
-<h2>Core values</h2><br>
-<br>
-<br>
-<ul>
-<li>Supreme quality</li>
-<li>Satisfactory Customer Service</li>
-<li>Honesty and Integrity</li>
-<li>Sustainability</li>
-<li>Innovation</li></ul>
-<br>
-<br>
-<h2>What makes us different</h2><br>
-<br>
-Our competitive advantage lies in our commitment for being a customer-focused company with continuous improvement to meet customers <br>satisfaction through our premium product.<br>
-<br>
-<br>
-
-<h2>Testimonials</h2><br>
-"They are the last stop for quality merged with style where car seat covers are concerned " - Gert Kriel<br>
-<br>
-"The only recommended place for premium seat protection covers. They've been our (Pre-owned cars dealership)car<br>
-seat covers supplier for 3 years and we are still happy clients" - Paul Dutton<br>
-<br>
-"They are simply the best in their field and the staff constantly displays unmatched customer service" -Annaphiri Mphahlele <br>
-<br>
-<br>
-<h2>Our Products/Work</h2><br>
-<br>
-<br>
- <a id="profile" href="images/Erickel Products Company Profile.pdf" target=_blank>Company Profile</a><br>
-
+<h2>Target Market</h2>
+<p>
+Our services cater to everyone — from individuals upgrading vehicle interiors to large enterprises protecting vehicle fleets.
 </p>
-	<hr>
-	<br>
-	<h3>Our Photo Library</h3><br>
-	<br>
-	<img id="za" src="images/za.jpg">
-	<img id="ze" src="images/ze.jpg"><br>
-	<br>
-	<img id="zi" src="images/zi.jpg">
-	<img id="zo" src="images/zo.jpg"><br>
-	<br>
-	<img id="ya" src="images/ya.jpg">
-	<img id="xa" src="images/xa.jpg"><br>
-	<br>
-	<img id="xe" src="images/xe.jpg">
-	<img id="xi" src="images/xi.jpg"><br>
-	<br>
-	<img id="xo" src="images/xo.jpg">
-	<img id="xu" src="images/xu.jpg"><br>
-	<br>
-	<footer>
-		&copy; Erickel products & projects 2023 
-	</footer>
+
+<h2>Core Values</h2>
+<ul>
+<li>Quality</li>
+<li>Customer Service</li>
+<li>Honesty</li>
+<li>Sustainability</li>
+<li>Innovation</li>
+</ul>
+
+<h2>What Makes Us Different</h2>
+<p>
+We are customer-focused and relentlessly committed to improvement, offering premium products built to exceed expectations.
+</p>
+
+<h2>Testimonials</h2>
+<p>
+“They are the last stop for quality merged with style” – Gert Kriel<br><br>
+“The best supplier we’ve ever used for our dealership” – Paul Dutton<br><br>
+“Unmatched customer service and workmanship” – Annaphiri Mphahlele
+</p>
+
+<br>
+<a id="profile" style="color:#ff73ff; font-size:20px; font-weight:bold;" href="images/Erickel Products Company Profile.pdf" target="_blank">📄 View Company Profile</a>
+</section>
+
+<hr style="width:80%; opacity:0.3;">
+
+<h2>Our Photo Library</h2>
+
+<div class="gallery-grid">
+    <img src="images/za.jpg">
+    <img src="images/ze.jpg">
+    <img src="images/zi.jpg">
+    <img src="images/zo.jpg">
+    <img src="images/ya.jpg">
+    <img src="images/xa.jpg">
+    <img src="images/xe.jpg">
+    <img src="images/xi.jpg">
+    <img src="images/xo.jpg">
+    <img src="images/xu.jpg">
+</div>
+
+<footer>
+    © Erickel Products & Projects — All Rights Reserved
+</footer>
 
 </body>
 </html>

@@ -2,205 +2,106 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Erickel Products & Projects | Contact Us</title>
+<title>Contact | Erickel Car Seats & Covers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Tag Initialization -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MCM4RRMF7"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-5MCM4RRMF7');
-</script>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('images/logo.jpg');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-align: center;
-        animation: fadeIn 1s ease-in;
-    }
+body { margin: 0; background: #f7eaff; font-family: 'Poppins'; color: #3a0066; }
+header, nav, footer { text-align: center; padding: 20px; background: #a64cff; color: white; }
+nav { background: #8c2cff; }
+nav a { margin: 20px; color: white; text-decoration: none; font-size: 18px; }
 
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
+.contact-box {
+  width: 60%;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
 
-    h2 {
-        font-size: 35px;
-        font-weight: 600;
-        margin-top: 20px;
-        letter-spacing: 1px;
-        animation: slideDown 1s ease-out;
-    }
+input, textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-    @keyframes slideDown {
-        from {transform: translateY(-30px); opacity: 0;}
-        to {transform: translateY(0); opacity: 1;}
-    }
+button {
+  background: #8c2cff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    nav a {
-        margin: 0 20px;
-        color: white;
-        font-weight: 500;
-        text-decoration: none;
-        font-size: 18px;
-        transition: 0.3s;
-    }
+button:hover { background: #5d0099; }
 
-    nav a:hover {
-        color: yellow;
-        transform: scale(1.1);
-    }
+.social a {
+  margin: 10px;
+  font-size: 30px;
+  color: #8c2cff;
+  transition: 0.3s;
+}
 
-    .contact-container {
-        width: 60%;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.15);
-        padding: 25px;
-        margin-top: 30px;
-        border-radius: 12px;
-        backdrop-filter: blur(8px);
-        animation: zoomIn 0.8s ease-out;
-    }
+.social a:hover { color: yellow; }
 
-    @keyframes zoomIn {
-        from {transform: scale(0.9); opacity: 0;}
-        to {transform: scale(1); opacity: 1;}
-    }
-
-    input, textarea {
-        width: 90%;
-        padding: 12px;
-        margin: 10px 0;
-        border-radius: 6px;
-        border: none;
-        font-size: 16px;
-        outline: none;
-    }
-
-    textarea {
-        height: 120px;
-        resize: none;
-    }
-
-    #send {
-        width: 40%;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        background: #007bff;
-        color: white;
-        cursor: pointer;
-        font-size: 18px;
-        margin-top: 10px;
-        transition: 0.3s;
-    }
-
-    #send:hover {
-        background: #28a745;
-        transform: scale(1.05);
-    }
-
-    .social-links a {
-        margin: 10px;
-        font-size: 30px;
-        color: white;
-        transition: 0.3s;
-    }
-
-    .social-links a:hover {
-        color: yellow;
-        transform: scale(1.2);
-    }
-
-    .map-container {
-        margin-top: 20px;
-        width: 100%;
-        height: 320px;
-        border-radius: 12px;
-        overflow: hidden;
-        animation: fadeIn 1.3s ease-in;
-    }
-
-    footer {
-        margin-top: 20px;
-        padding: 10px;
-        font-size: 14px;
-        color: #ccc;
-    }
+.map {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
 </style>
 </head>
+
 <body>
 
-<h2>Contact Erickel Products & Projects</h2>
+<header><h2>Contact Us</h2></header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="details.html">About Us</a>
-    <a href="products.html">Products</a>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-<div class="contact-container">
-    <form action="https://wa.me/27659239177" method="GET" target="_blank">
+<div class="contact-box">
 
-        <input type="text" name="name" placeholder="Enter Your Name" required>
+<h3>Send Message on WhatsApp</h3>
 
-        <input type="text" name="surname" placeholder="Enter Surname" required>
+<form action="https://wa.me/27659239177" method="GET" target="_blank">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <textarea name="text" placeholder="Your Message"></textarea>
+    <button type="submit">Send on WhatsApp</button>
+</form>
 
-        <input type="text" name="phone" placeholder="Contact Number" required>
-
-        <input type="email" name="email" placeholder="Email Address" required>
-
-        <textarea name="text" placeholder="Your Message"></textarea>
-
-        <button id="send">Send via WhatsApp</button>
-    </form>
-</div>
-
-<br><br>
-
-<strong>Our Direct Contacts</strong>
-<p>
-    Director: Erick S Chikwawa<br>
-    Contact: 065 923 9177<br>
-    Email: admin@erickelproducts-projects.com<br><br>
-
-    Admin Office: Ashley E Letsebe<br>
-    Contact: 067 776 8041
-</p>
-
-<div class="social-links">
+<h3>Our Social Media</h3>
+<div class="social">
     <a href="https://web.facebook.com/profile.php?id=100075293276309" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.instagram.com/carseatcovers_by_erickel/" target="_blank"><i class="fab fa-instagram"></i></a>
 </div>
 
-<h3>Find Us Here</h3>
-<div class="map-container">
-    <!-- LIVE GOOGLE MAP -->
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.7269452293126!2d28.011!3d-26.669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95bcb8c9e6a6ed%3A0x3a25329a8c15505d!2s22%20Assegai%20St%2C%20Three%20Rivers%2C%20Vereeniging%2C%201935!5e0!3m2!1sen!2sza!4v1699999999999" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
 </div>
 
-<footer>
-    &copy; 2023 Erickel Products & Projects Company. All Rights Reserved.
-</footer>
+<h3 style="text-align:center;">Find Us Here</h3>
+
+<div class="map">
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.7269452293126!2d28.011!3d-26.669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95bcb8c9e6a6ed%3A0x3a25329a8c15505d!2s22%20Assegai%20St%2C%20Three%20Rivers%2C%20Vereeniging%2C%201935!5e0!3m2!1sen!2sza!4v1699999999999"
+    width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<footer>© 2025 Erickel Car Seats & Covers</footer>
 
 </body>
 </html>

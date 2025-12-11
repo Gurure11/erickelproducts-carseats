@@ -2,8 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport"content="width=device-width, initial-scale=1.0">
-<title>Erickel Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Erickel Products & Projects – Premium custom car seat covers, upholstery refurbishment, and installation services." />
+<meta name="keywords" content="car seat covers, upholstery, custom seat covers, Erickel Products" />
+<meta name="author" content="Erickel Products & Projects">
+<title>Erickel Products & Projects</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MCM4RRMF7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-5MCM4RRMF7");
+</script>
 
 <!-- Lottie Animation -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -11,71 +23,62 @@
 <style>
     body {
         margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: #f3f5ff;
+        font-family: 'Poppins', sans-serif;
+        background: #f5f7fc;
         color: #333;
-        overflow-x: hidden;
     }
 
     /* NAVIGATION */
     nav {
+        background: #0033cc;
+        padding: 15px;
         display: flex;
         justify-content: center;
+        gap: 20px;
         flex-wrap: wrap;
-        gap: 25px;
-        background: linear-gradient(to right, #0033cc, #0055ff);
-        padding: 18px 10px;
         position: sticky;
         top: 0;
-        z-index: 1000;
+        z-index: 999;
     }
 
     nav a {
         color: white;
         text-decoration: none;
-        font-size: 18px;
+        padding: 8px 12px;
+        font-size: 17px;
         font-weight: 600;
-        position: relative;
-    }
-
-    nav a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 0%;
-        height: 3px;
-        background: #fff;
+        border-radius: 6px;
         transition: 0.3s;
     }
 
-    nav a:hover::after {
-        width: 100%;
+    nav a:hover {
+        background: white;
+        color: #0033cc;
     }
 
     /* HERO SECTION */
     .hero {
         text-align: center;
-        padding: 50px 15px;
-        background: linear-gradient(135deg, #0033cc, #0099ff);
+        padding: 50px 20px;
+        background: linear-gradient(135deg, #0033cc, #0077ff);
         color: white;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 38px;
         font-weight: 800;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
-    .hero-img {
-        width: 180px;
+    .hero img {
+        width: 200px;
         border-radius: 50%;
         margin-top: 20px;
-        border: 6px solid white;
-        animation: float 4s ease-in-out infinite;
+        border: 5px solid white;
+        animation: float 4s infinite ease-in-out;
     }
 
-    /* ANIMATIONS */
+    /* Floating animation for hero image */
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-12px); }
@@ -83,31 +86,35 @@
 
     section {
         width: 90%;
-        max-width: 1000px;
+        max-width: 1100px;
         margin: auto;
         padding: 40px 0;
     }
 
     h2 {
-        background: black;
-        color: white;
-        padding: 10px 15px;
+        background: #000;
         display: inline-block;
+        padding: 8px 15px;
+        color: white;
         border-radius: 5px;
         margin-bottom: 20px;
-        font-size: 26px;
     }
 
-    p {
+    p, li {
         font-size: 17px;
         line-height: 1.7;
     }
 
-    /* IMAGE GALLERY */
+    ul li {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    /* GALLERY GRID */
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
         margin-top: 30px;
     }
 
@@ -115,15 +122,16 @@
         width: 100%;
         height: auto;
         border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
         transition: transform .3s, box-shadow .3s;
     }
 
     .gallery img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+        transform: scale(1.08);
+        box-shadow: 0px 8px 35px rgba(0,0,0,0.3);
     }
 
+    /* FOOTER */
     footer {
         text-align: center;
         padding: 25px;
@@ -133,81 +141,10 @@
         font-size: 16px;
     }
 
-    /* =============== RESPONSIVE BREAKPOINTS =============== */
-
-    /* Large phones & tablets */
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 32px;
-        }
-
-        nav {
-            gap: 15px;
-        }
-
-        nav a {
-            font-size: 16px;
-        }
-
-        .hero-img {
-            width: 150px;
-        }
-
-        h2 {
-            font-size: 22px;
-        }
-
-        p {
-            font-size: 16px;
-        }
+    /* RESPONSIVE HEADINGS */
+    @media (max-width: 600px) {
+        .hero h1 { font-size: 28px; }
     }
-
-    /* Small phones (350px–480px) */
-    @media (max-width: 480px) {
-        .hero h1 {
-            font-size: 26px;
-            line-height: 32px;
-        }
-
-        .hero {
-            padding: 40px 10px;
-        }
-
-        nav {
-            padding: 12px 5px;
-        }
-
-        nav a {
-            font-size: 15px;
-        }
-
-        .hero-img {
-            width: 120px;
-        }
-
-        section {
-            padding: 30px 0;
-        }
-
-        .gallery {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-    }
-
-    /* Very small screens (under 340px) */
-    @media (max-width: 340px) {
-        nav {
-            gap: 10px;
-        }
-        nav a {
-            font-size: 14px;
-        }
-        .gallery {
-            grid-template-columns: 1fr;
-        }
-    }
-
 </style>
 </head>
 
@@ -220,10 +157,11 @@
     <a href="products.html">Our Products</a>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION WITH ANIMATION -->
 <div class="hero">
     <h1>ERICKEL PRODUCTS & PROJECTS</h1>
 
+    <!-- Animated character -->
     <lottie-player 
         src="https://assets10.lottiefiles.com/packages/lf20_sosqv1id.json"
         background="transparent"
@@ -232,43 +170,46 @@
         loop autoplay>
     </lottie-player>
 
-    <img class="hero-img" src="images/z.jpg" alt="Main Image">
+    <img src="images/z.jpg" alt="Main Image">
 </div>
 
-<!-- ABOUT SECTION -->
 <section>
     <h2>About Us</h2>
-    <p>Erickel Product & Projects is a top-notch car seat cover manufacturer founded in 2010...</p>
+    <p>
+        Erickel Products & Projects is a premium car seat cover manufacturing business established in 2010...
+        (your full text continues here)
+    </p>
 </section>
 
 <section>
     <h2>Mission Statement</h2>
-    <p>Your mission text...</p>
+    <p>Your full mission text here...</p>
 </section>
 
 <section>
     <h2>Vision</h2>
-    <p>Your vision text...</p>
+    <p>Your full vision text...</p>
 </section>
 
 <section>
-    <h2>Product / Service</h2>
-    <a href="https://youtu.be/ZoT4XF0Jx7M" target="_blank" 
-       style="font-size:20px; color:#0055ff; font-weight:bold;">Watch on YouTube</a>
-    <p>Product details...</p>
+    <h2>Products / Services</h2>
+
+    <p><a href="https://youtu.be/ZoT4XF0Jx7M" target="_blank" style="color:#0033cc; font-weight:bold;">Watch our YouTube Video</a></p>
+
+    <p>Your product description continues...</p>
 </section>
 
 <section>
     <h2>Testimonials</h2>
     <p>"They are the last stop..." – Gert Kriel</p>
     <p>"The only recommended place..." – Paul Dutton</p>
-    <p>"They are simply the best..." – Annaphiri Mphahlele</p>
+    <p>"Simply the best..." – Annaphiri Mphahlele</p>
 </section>
 
 <section>
-    <h2>Our Work</h2>
-    <a href="images/Erickel Products Company Profile.pdf" target="_blank"
-       style="color:#0033cc; font-size:20px; font-weight:600;">Download Company Profile</a>
+    <h2>Our Company Profile</h2>
+    <a href="images/Erickel Products Company Profile.pdf" target="_blank" 
+       style="color:#0033cc; font-weight:600; font-size:18px;">Download Company Profile</a>
 </section>
 
 <section>

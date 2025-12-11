@@ -1,237 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Erickel Products & Projects – Premium custom car seat covers, upholstery refurbishment, and installation services." />
-<meta name="keywords" content="car seat covers, upholstery, custom seat covers, Erickel Products" />
-<meta name="author" content="Erickel Products & Projects">
-<title>Erickel Products & Projects</title>
+<meta charset="UTF-8">
+<title>Contact | Erickel Car Seats & Covers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MCM4RRMF7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-5MCM4RRMF7");
-</script>
-
-<!-- Lottie Animation -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: #f5f7fc;
-        color: #333;
-    }
+body { margin: 0; background: #f7eaff; font-family: 'Poppins'; color: #3a0066; }
+header, nav, footer { text-align: center; padding: 20px; background: #a64cff; color: white; }
+nav { background: #8c2cff; }
+nav a { margin: 20px; color: white; text-decoration: none; font-size: 18px; }
 
-    /* NAVIGATION */
-    nav {
-        background: #0033cc;
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
+.contact-box {
+  width: 60%;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        padding: 8px 12px;
-        font-size: 17px;
-        font-weight: 600;
-        border-radius: 6px;
-        transition: 0.3s;
-    }
+input, textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-    nav a:hover {
-        background: white;
-        color: #0033cc;
-    }
+button {
+  background: #8c2cff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    /* HERO SECTION */
-    .hero {
-        text-align: center;
-        padding: 50px 20px;
-        background: linear-gradient(135deg, #0033cc, #0077ff);
-        color: white;
-    }
+button:hover { background: #5d0099; }
 
-    .hero h1 {
-        font-size: 38px;
-        font-weight: 800;
-        margin-bottom: 10px;
-    }
+.social a {
+  margin: 10px;
+  font-size: 30px;
+  color: #8c2cff;
+  transition: 0.3s;
+}
 
-    .hero img {
-        width: 200px;
-        border-radius: 50%;
-        margin-top: 20px;
-        border: 5px solid white;
-        animation: float 4s infinite ease-in-out;
-    }
+.social a:hover { color: yellow; }
 
-    /* Floating animation for hero image */
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-12px); }
-    }
-
-    section {
-        width: 90%;
-        max-width: 1100px;
-        margin: auto;
-        padding: 40px 0;
-    }
-
-    h2 {
-        background: #000;
-        display: inline-block;
-        padding: 8px 15px;
-        color: white;
-        border-radius: 5px;
-        margin-bottom: 20px;
-    }
-
-    p, li {
-        font-size: 17px;
-        line-height: 1.7;
-    }
-
-    ul li {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    /* GALLERY GRID */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 18px;
-        margin-top: 30px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
-        transition: transform .3s, box-shadow .3s;
-    }
-
-    .gallery img:hover {
-        transform: scale(1.08);
-        box-shadow: 0px 8px 35px rgba(0,0,0,0.3);
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        padding: 25px;
-        background: #0033cc;
-        color: white;
-        margin-top: 40px;
-        font-size: 16px;
-    }
-
-    /* RESPONSIVE HEADINGS */
-    @media (max-width: 600px) {
-        .hero h1 { font-size: 28px; }
-    }
+.map {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<header><h2>Contact Us</h2></header>
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="contacts.html">Contacts</a>
-    <a href="products.html">Our Products</a>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO SECTION WITH ANIMATION -->
-<div class="hero">
-    <h1>ERICKEL PRODUCTS & PROJECTS</h1>
+<div class="contact-box">
 
-    <!-- Animated character -->
-    <lottie-player 
-        src="https://assets10.lottiefiles.com/packages/lf20_sosqv1id.json"
-        background="transparent"
-        speed="1"
-        style="width: 180px; height: 180px; margin:auto;"
-        loop autoplay>
-    </lottie-player>
+<h3>Send Message on WhatsApp</h3>
 
-    <img src="images/z.jpg" alt="Main Image">
+<form action="https://wa.me/27659239177" method="GET" target="_blank">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <textarea name="text" placeholder="Your Message"></textarea>
+    <button type="submit">Send on WhatsApp</button>
+</form>
+
+<h3>Our Social Media</h3>
+<div class="social">
+    <a href="https://web.facebook.com/profile.php?id=100075293276309" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/carseatcovers_by_erickel/" target="_blank"><i class="fab fa-instagram"></i></a>
 </div>
 
-<section>
-    <h2>About Us</h2>
-    <p>
-        Erickel Products & Projects is a premium car seat cover manufacturing business established in 2010...
-        (your full text continues here)
-    </p>
-</section>
+</div>
 
-<section>
-    <h2>Mission Statement</h2>
-    <p>Your full mission text here...</p>
-</section>
+<h3 style="text-align:center;">Find Us Here</h3>
 
-<section>
-    <h2>Vision</h2>
-    <p>Your full vision text...</p>
-</section>
+<div class="map">
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.7269452293126!2d28.011!3d-26.669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95bcb8c9e6a6ed%3A0x3a25329a8c15505d!2s22%20Assegai%20St%2C%20Three%20Rivers%2C%20Vereeniging%2C%201935!5e0!3m2!1sen!2sza!4v1699999999999"
+    width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+</div>
 
-<section>
-    <h2>Products / Services</h2>
-
-    <p><a href="https://youtu.be/ZoT4XF0Jx7M" target="_blank" style="color:#0033cc; font-weight:bold;">Watch our YouTube Video</a></p>
-
-    <p>Your product description continues...</p>
-</section>
-
-<section>
-    <h2>Testimonials</h2>
-    <p>"They are the last stop..." – Gert Kriel</p>
-    <p>"The only recommended place..." – Paul Dutton</p>
-    <p>"Simply the best..." – Annaphiri Mphahlele</p>
-</section>
-
-<section>
-    <h2>Our Company Profile</h2>
-    <a href="images/Erickel Products Company Profile.pdf" target="_blank" 
-       style="color:#0033cc; font-weight:600; font-size:18px;">Download Company Profile</a>
-</section>
-
-<section>
-    <h2>Photo Library</h2>
-
-    <div class="gallery">
-        <img src="images/za.jpg">
-        <img src="images/ze.jpg">
-        <img src="images/zi.jpg">
-        <img src="images/zo.jpg">
-        <img src="images/ya.jpg">
-        <img src="images/xa.jpg">
-        <img src="images/xe.jpg">
-        <img src="images/xi.jpg">
-        <img src="images/xo.jpg">
-        <img src="images/xu.jpg">
-    </div>
-</section>
-
-<footer>
-    © Erickel Products & Projects 2023
-</footer>
+<footer>© 2025 Erickel Car Seats & Covers</footer>
 
 </body>
 </html>

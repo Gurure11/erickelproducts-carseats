@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
 <title>Erickel Products</title>
 
 <!-- Lottie Animation -->
@@ -20,9 +21,10 @@
     nav {
         display: flex;
         justify-content: center;
-        gap: 40px;
+        flex-wrap: wrap;
+        gap: 25px;
         background: linear-gradient(to right, #0033cc, #0055ff);
-        padding: 20px 0;
+        padding: 18px 10px;
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -54,20 +56,19 @@
     /* HERO SECTION */
     .hero {
         text-align: center;
-        padding: 70px 20px;
+        padding: 50px 15px;
         background: linear-gradient(135deg, #0033cc, #0099ff);
         color: white;
-        animation: fadeIn 1.2s;
     }
 
     .hero h1 {
-        font-size: 45px;
-        margin-bottom: 20px;
+        font-size: 40px;
         font-weight: 800;
+        margin-bottom: 20px;
     }
 
     .hero-img {
-        width: 220px;
+        width: 180px;
         border-radius: 50%;
         margin-top: 20px;
         border: 6px solid white;
@@ -75,11 +76,6 @@
     }
 
     /* ANIMATIONS */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-12px); }
@@ -89,8 +85,7 @@
         width: 90%;
         max-width: 1000px;
         margin: auto;
-        padding: 50px 0;
-        animation: fadeIn 1s;
+        padding: 40px 0;
     }
 
     h2 {
@@ -99,14 +94,20 @@
         padding: 10px 15px;
         display: inline-block;
         border-radius: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 1.7;
     }
 
     /* IMAGE GALLERY */
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
         margin-top: 30px;
     }
 
@@ -125,14 +126,91 @@
 
     footer {
         text-align: center;
-        padding: 30px;
+        padding: 25px;
         background: #0033cc;
         color: white;
         margin-top: 40px;
+        font-size: 16px;
     }
-</style>
 
+    /* =============== RESPONSIVE BREAKPOINTS =============== */
+
+    /* Large phones & tablets */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 32px;
+        }
+
+        nav {
+            gap: 15px;
+        }
+
+        nav a {
+            font-size: 16px;
+        }
+
+        .hero-img {
+            width: 150px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    /* Small phones (350px–480px) */
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        .hero {
+            padding: 40px 10px;
+        }
+
+        nav {
+            padding: 12px 5px;
+        }
+
+        nav a {
+            font-size: 15px;
+        }
+
+        .hero-img {
+            width: 120px;
+        }
+
+        section {
+            padding: 30px 0;
+        }
+
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+    }
+
+    /* Very small screens (under 340px) */
+    @media (max-width: 340px) {
+        nav {
+            gap: 10px;
+        }
+        nav a {
+            font-size: 14px;
+        }
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
 </head>
+
 <body>
 
 <!-- NAVIGATION -->
@@ -146,12 +224,11 @@
 <div class="hero">
     <h1>ERICKEL PRODUCTS & PROJECTS</h1>
 
-    <!-- Animated Character -->
     <lottie-player 
         src="https://assets10.lottiefiles.com/packages/lf20_sosqv1id.json"
         background="transparent"
         speed="1"
-        style="width: 200px; height: 200px; margin:auto;"
+        style="width: 180px; height: 180px; margin:auto;"
         loop autoplay>
     </lottie-player>
 
@@ -161,13 +238,9 @@
 <!-- ABOUT SECTION -->
 <section>
     <h2>About Us</h2>
-    <p>
-        Erickel Product & Projects is a top-notch car seat cover manufacturer founded in 2010...
-        (keep your original text here — I shortened for clarity)
-    </p>
+    <p>Erickel Product & Projects is a top-notch car seat cover manufacturer founded in 2010...</p>
 </section>
 
-<!-- MISSION -->
 <section>
     <h2>Mission Statement</h2>
     <p>Your mission text...</p>
@@ -180,8 +253,9 @@
 
 <section>
     <h2>Product / Service</h2>
-    <a href="https://youtu.be/ZoT4XF0Jx7M" target="_blank" style="font-size:20px; color:#0055ff; font-weight:bold;">Watch on YouTube</a>
-    <p>Product description...</p>
+    <a href="https://youtu.be/ZoT4XF0Jx7M" target="_blank" 
+       style="font-size:20px; color:#0055ff; font-weight:bold;">Watch on YouTube</a>
+    <p>Product details...</p>
 </section>
 
 <section>
@@ -193,10 +267,10 @@
 
 <section>
     <h2>Our Work</h2>
-    <a href="images/Erickel Products Company Profile.pdf" target="_blank" style="color:#0033cc; font-size:20px; font-weight:600;">Download Company Profile</a>
+    <a href="images/Erickel Products Company Profile.pdf" target="_blank"
+       style="color:#0033cc; font-size:20px; font-weight:600;">Download Company Profile</a>
 </section>
 
-<!-- PHOTO GALLERY -->
 <section>
     <h2>Photo Library</h2>
 

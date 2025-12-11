@@ -1,150 +1,206 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Erickel Products</title>
-	<!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<title>Erickel Products & Projects | Contact Us</title>
+
+<!-- Google Tag Initialization -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MCM4RRMF7"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5MCM4RRMF7');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5MCM4RRMF7');
 </script>
-	<style type="text/css">
-		#main-body{
-			align-items: center;
-			text-align: center;
-			color: blue;
-			background-image: url(images/logo.jpg);
-			background-size: cover;
-		}
-		
-		#send{
-			color: white;
-			background-color: blue;
-			border-radius: 2px;
-			border: none;
-			padding: 5px;
-		}
-		#send:hover{
-			color: blue;
-			background-color: green;
-			cursor: pointer;
-			opacity: 0.5;
-			transition: 0.15s;
-		}
-		#home{
-			margin-right: 30px;
-		}
-		#details{margin-right: 30px;
-		}
-		#products{
-			margin-right: 30px;
-		}
-		#home:hover{
-			color: red;
-			background-color: green;
-			opacity: 0.5;
-			cursor: pointer;
-			transition: 0.15s;
 
-		}
-		#details:hover{
-			color: red;
-			background-color: green;
-			opacity: 0.5;
-			cursor: pointer;
-			transition: 0.15s;
-		}
-		#products:hover{
-			color: red;
-			background-color: green;
-			opacity: 0.5;
-			cursor: pointer;
-			transition: 0.15s;
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-		}
-		#face:hover{
-			color: red;
-			cursor: pointer;
-			opacity: 0.5;
-			background-color: yellow;
-		}
-		#insta:hover{
-			color: red;
-			cursor: pointer;
-			opacity: 0.5;
-			background-color: yellow;
-		}
-		#map:hover{  
-			color: red;
-			cursor: pointer;
-			opacity: 0.5;
-			background-color: yellow;
-		}
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-	</style>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('images/logo.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    h2 {
+        font-size: 35px;
+        font-weight: 600;
+        margin-top: 20px;
+        letter-spacing: 1px;
+        animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {transform: translateY(-30px); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+
+    nav a {
+        margin: 0 20px;
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: yellow;
+        transform: scale(1.1);
+    }
+
+    .contact-container {
+        width: 60%;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        margin-top: 30px;
+        border-radius: 12px;
+        backdrop-filter: blur(8px);
+        animation: zoomIn 0.8s ease-out;
+    }
+
+    @keyframes zoomIn {
+        from {transform: scale(0.9); opacity: 0;}
+        to {transform: scale(1); opacity: 1;}
+    }
+
+    input, textarea {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 6px;
+        border: none;
+        font-size: 16px;
+        outline: none;
+    }
+
+    textarea {
+        height: 120px;
+        resize: none;
+    }
+
+    #send {
+        width: 40%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    #send:hover {
+        background: #28a745;
+        transform: scale(1.05);
+    }
+
+    .social-links a {
+        margin: 10px;
+        font-size: 30px;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .social-links a:hover {
+        color: yellow;
+        transform: scale(1.2);
+    }
+
+    .map-container {
+        margin-top: 20px;
+        width: 100%;
+        height: 320px;
+        border-radius: 12px;
+        overflow: hidden;
+        animation: fadeIn 1.3s ease-in;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 14px;
+        color: #ccc;
+    }
+</style>
 </head>
-<body id="main-body">
-	<h2>Erickel Product & Projects Contact Form</h2><br>
-	<hr>
-	<br>
-	<a id="home" href="index.html">Home Page</a>
-	<a id="details" href="details.html">About Us</a>
-	<a id="products" href="products.html">Products</a><br>
-	<br>
-	<br>
-		<form action="https://formsubmit.co/admin@erickelproducts-projects.com" method="POST">
-			<div>
-			
-			<label>Name</label>
-			<input type="text" name="firstName" placeholder="Enter first name"><br>
-			<br>
-			<label>Surname</label>
-			<input type="text" name="lastName" placeholder="Enter Surname"><br>
-			<br>
-			<label>Contact Number</label>
-			<input type="text" placeholder="cell no."><br><br>
-			<label>Email</label>	
-			<input type="email" name="Email" placeholder="Email Adress"><br>
-				<br>
-			<hr>
-			<label>Message</label>
-			<textarea type="text area" name="Message"></textarea><br>
-			<br>
-			<button id="send" input="submit">Submit</button><br>
-			<br>
-		</div>
-	</form>
-	
-<strong>Contacts</strong> <br>
-<br>
-Director : 		Erick S Chikwawa<br>
-Contact No.		065 923 9177<br>
-Email : 		admin@erickelproducts-projects.com
+<body>
 
-Admin Office: 	Ashley E Letsebe <br>
-Contact No.		067 776 8041 <br>
+<h2>Contact Erickel Products & Projects</h2>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="details.html">About Us</a>
+    <a href="products.html">Products</a>
+</nav>
 
-<a id="face" href="https://web.facebook.com/profile.php?id=100075293276309">Facebook</a><br>
-<a id="insta" href="https://www.instagram.com/carseatcovers_by_erickel/">Instagram</a><br>
-Address :  22 CNR Assegai & Umtata Street<br>
-			Three Rivers<br>
-			Vereening<br>
-			1935<br>
-			<a id="map" href="https://goo.gl/maps/m7WjejxHDPxQ8N7d6">Map Click Me</a><br>
-Contact us directly to learn more about our products, pricing information and any enquiries. <br>
+<div class="contact-container">
+    <form action="https://wa.me/27659239177" method="GET" target="_blank">
+
+        <input type="text" name="name" placeholder="Enter Your Name" required>
+
+        <input type="text" name="surname" placeholder="Enter Surname" required>
+
+        <input type="text" name="phone" placeholder="Contact Number" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <textarea name="text" placeholder="Your Message"></textarea>
+
+        <button id="send">Send via WhatsApp</button>
+    </form>
+</div>
+
+<br><br>
+
+<strong>Our Direct Contacts</strong>
+<p>
+    Director: Erick S Chikwawa<br>
+    Contact: 065 923 9177<br>
+    Email: admin@erickelproducts-projects.com<br><br>
+
+    Admin Office: Ashley E Letsebe<br>
+    Contact: 067 776 8041
+</p>
+
+<div class="social-links">
+    <a href="https://web.facebook.com/profile.php?id=100075293276309" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/carseatcovers_by_erickel/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+
+<h3>Find Us Here</h3>
+<div class="map-container">
+    <!-- LIVE GOOGLE MAP -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.7269452293126!2d28.011!3d-26.669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95bcb8c9e6a6ed%3A0x3a25329a8c15505d!2s22%20Assegai%20St%2C%20Three%20Rivers%2C%20Vereeniging%2C%201935!5e0!3m2!1sen!2sza!4v1699999999999" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
 
 <footer>
-	&copy erickel products & projects company  2023.
-	<br>
-	<br>
+    &copy; 2023 Erickel Products & Projects Company. All Rights Reserved.
 </footer>
-
 
 </body>
 </html>
-

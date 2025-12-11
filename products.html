@@ -1,210 +1,152 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Erickel  Car Seats &  Products</title>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MCM4RRMF7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erickel Car Seats & Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 1px;
+      animation: fadeDown 1.2s ease;
+    }
+    nav {
+      text-align: center;
+      background: #222;
+      padding: 12px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .hero {
+      width: 100%;
+      height: 420px;
+      background: url('images/vini.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fade 1.5s ease;
+    }
+    .hero h2 {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 32px;
+    }
+    .gallery-title {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 26px;
+      font-weight: 600;
+      animation: fadeUp 1.3s ease;
+    }
+    .grid-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .grid-gallery img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeUp 1.4s ease;
+    }
+    .grid-gallery img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #ffcc00;
+      margin: 0 10px;
+      text-decoration: none;
+    }
 
-  gtag('config', 'G-5MCM4RRMF7');
-</script>
-	<style type="text/css">
-		#a{
-
-			width: 400px;
-			border-radius: 5px;
-			height: 400px;
-		}
-		#b{
-
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;
-		}
-		#c{
-
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;
-		}
-		#d{
-
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;
-		}
-		#e{
-
-			width: 400px;
-			border-radius: 5px;
-			height: 700px;
-		}
-		#f{
-
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;
-		}
-		#g{
-
-			width: 400px;
-			border-radius: 10px
-			height: 400px;		
-		}
-		#main-body{
-			text-align: center;
-			align-items: center;
-			color: grey;
-		}
-		#home{
-			margin-right: 12px;
-		}
-		#details{
-			margin-right: 12px;
-		}
-		#home:hover{
-			color: red;
-			opacity: 0.5;
-			background-color: green;
-		}
-		#details:hover{
-			color: red;
-			opacity: 0.5;
-			background-color: green;
-
-		}
-		#contacts:hover{
-			color: red;
-			opacity: 0.5;
-			background-color: green;
-		}
-		#h{
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;	
-
-		}
-		#i{
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;	
-		}
-		#j{
-			width: 400px;
-			border-radius: 10px;
-				
-		}
-		#k{
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;	
-		}
-		#l{
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;	
-		}
-		#m{
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;
-		}
-		#n{
-			width: 400px;
-			border-radius: 10px;
-			height: 400px;
-		}
-		#z{
-			width: 400px;
-			border-radius: 10px;
-		}
-		
-	</style>
+    /* Animations */
+    @keyframes fade {
+      from {opacity: 0;} to {opacity: 1;}
+    }
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-20px);} to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
-<body id="main-body">
-	<h1>Erickel Car Seats & Products</h1>
-	<br>
-	<hr>
-	<br>
-	<a id="home" href="index.html">Home Page</a>
-	<a id="details" href="details.html">About Us</a>
-	<a id="contacts" href="contacts.html">Contacts</a>
-	<br>
-	<br>
-	<strong>The desires of your heart and our designs</strong><br>
-	<br>
-	<img id="z" src="images/vini.jpeg"><br>
-	<br>
-	<br>
-	<img id="a" src="images/vene.jpeg"><br>
-	Beautiful car seats for all models. Be it a four seater, two seater, truck or sport car,we design specifically for your vehicle.
-	<br>
-	<br>
-	<img id="b" src="images/nana.jpeg"><br>
-	We make and design maginificent car seats for trucks that beautify and protect the origional seats from any damage excess <br>
-	direct sunlight. From head rest, to dressing the whole seat and covering it from dust and attrition and bruising from passengers.
-	<br>
-	<br>
-	<img id="c" src="images/vono.jpeg"><br>
-	Your vehicle will never be the same again in this beautiful covering.
-	<br>
-	<br>
-	<img id="d" src="images/d.jpg"><br>
-	Beautiful head rest cover with zipper that you can easily remove and wipe off when you need to clean. Our material is quality and will
-	<br>last you a very long time. You will experience comfort and beauty all in one package.
-	<br>
-	<br>
-	<img id="e" src="images/e.jpg"><br>
-	Even the logo of your vehicle is embedded onto the car seats, we have several designs to suit your mood. Some completely cover the whole<br> seat from head restto the actual seat where you sit.
-	<br>
-	<br>
-	<img id="f" src="images/f.jpg"><br>
-	<br>
-	<br>
-	<img id="g" src="images/g.jpg"><br>
-	We also have car seats for VW vehicles, trucks and smaller vehicles to make your car look executive. Your car seats need to be protected <br>from the dirt, food, weather and accumulating dust. Our kids love to eat inside the car so if your car seats are<br> covered you will have nothing to worry about and they will last longer.
-	<br>
-	<br>
-	
-	<br>
-	<img id="i" src="images/i.jpg"><br>
-	Double car seat for Legend truck, neatly furbished and dressed in new seat covers. All models and all trucks includimg taxis we supply.
-	<br>Our technicians and tailors work flat out and have years of experience. We have been a reputable company supplying big companies<br>
-	over many years thus giving us a good reputation.
-	<br>
-	<br>
-	<br>
-	<img id="j" src="images/j.jpg"><br>
-	<br>
-	<br>
-	<img id="l" src="images/l.jpg"><br>
-	We are not limited by your vehicle model, even trucks we supply and have all car seats design in stock. Seeing is believing come and <br>
-	exprience it for yourself.
-	<br>
-	<br>
-	<img id="" src=""><br>
-	<br>
-	<br>
-	<img id="m" src="images/m.jpg"><br>
-	Executive head rest designs with zippers on. What else would you desire with such an elagant looking vehicle.
-	<br>
-	<br>
-	<img id="n" src="images/n.jpg"><br>
-	Our taxi vehicle seats design are so sophisticated you would think its the origional design that came with the vehicle. You need <br>
-	these to protect your original seats from bruising and brushing from ever disembaking and embarking passengers. If your taxi<br>
-	is on the road pirating you need these to make it look neat at the same time preserving your car seats from damage and getting torn.
-	<br>
-	<br>
-	
-	<footer>
-		  <a href="index.html">Home Page</a> <a href="contacts.html">Contacts</a> <a href="details.html">About Us</a><br>
-		  <br>
-		  &copy; erickel products 2023
-	</footer>
+<body>
+
+<header>Erickel Car Seats & Products</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="details.html">About Us</a>
+  <a href="contacts.html">Contacts</a>
+</nav>
+
+<div class="hero">
+  <h2>The Desires of Your Heart & Our Designs</h2>
+</div>
+
+<h2 class="gallery-title">Our Latest Car Seat Designs</h2>
+
+<div class="grid-gallery">
+  <img src="images/vene.jpeg" />
+  <img src="images/nana.jpeg" />
+  <img src="images/vono.jpeg" />
+  <img src="images/d.jpg" />
+  <img src="images/e.jpg" />
+  <img src="images/f.jpg" />
+  <img src="images/g.jpg" />
+  <img src="images/i.jpg" />
+  <img src="images/j.jpg" />
+  <img src="images/l.jpg" />
+  <img src="images/m.jpg" />
+  <img src="images/n.jpg" />
+</div>
+
+<footer>
+  <a href="index.html">Home</a> |
+  <a href="contacts.html">Contacts</a> |
+  <a href="details.html">About Us</a>
+  <br><br>
+  &copy; Erickel Products 2025
+</footer>
 
 </body>
 </html>

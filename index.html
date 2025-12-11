@@ -1,103 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>  Erickel Car Seats & Covers</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erickel Car Seats & Covers — Modern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --purple:#8a2bff;
+      --dark:#23003b;
+      --muted:#f7eaff;
+      --glass: rgba(255,255,255,0.08);
+      --accent:#ffd86b;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(180deg,var(--muted), #fff); color:var(--dark);}
 
-<style>
-body { margin: 0; background: #f7eaff; font-family: 'Poppins'; }
-header, nav, footer { text-align: center; padding: 20px; background: #a64cff; color: white; }
-nav { background: #8c2cff; }
-nav a { margin: 20px; color: white; text-decoration: none; font-size: 18px; }
+    /* header */
+    header.site-header{background:linear-gradient(90deg,var(--purple),#5a00d6); color:white; padding:18px 20px; position:sticky; top:0; z-index:40; box-shadow:0 6px 18px rgba(90,0,150,0.12)}
+    .container{max-width:1150px;margin:0 auto;padding:0 18px}
+    .brand{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .brand .logo{display:flex;gap:12px;align-items:center}
+    .logo .badge{width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,#fff4, #fff1);display:grid;place-items:center;backdrop-filter:blur(4px);}
+    .logo svg{width:40px;height:40px}
+    .brand h1{font-size:20px;margin:0;font-weight:700;letter-spacing:0.4px}
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  padding: 30px;
-}
+    nav.primary{margin-top:12px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    nav.primary a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;transition:all .18s}
+    nav.primary a:hover{background:rgba(255,255,255,0.08)}
 
-.gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: 0.3s;
-}
+    /* hero */
+    .hero{padding:48px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));padding:28px;border-radius:14px;box-shadow:0 8px 30px rgba(110,40,200,0.06)}
+    .hero h2{margin:0 0 10px;font-size:28px;color:#fff}
+    .hero p{color:rgba(255,255,255,0.9);line-height:1.5}
+    .cta{display:inline-block;margin-top:14px;padding:10px 16px;background:var(--accent);color:#2b1c0a;border-radius:10px;font-weight:700;text-decoration:none}
 
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px purple;
-}
-  
-body { margin: 0; background: #f7eaff; font-family: 'Poppins'; color: #3a0066; }
-header, nav, footer { text-align: center; padding: 20px; background: #a64cff; color: white; }
-nav a { margin: 20px; color: white; text-decoration: none; font-size: 18px; }
-nav { background: #8c2cff; }
-section { padding: 40px; text-align: center; }
-h2 { font-size: 32px; color: #5a009e; }
-p { width: 70%; margin: auto; font-size: 18px; line-height: 1.7; }
-</style>
+    /* animated characters */
+    .characters{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .char{width:110px;height:110px;border-radius:12px;background:linear-gradient(180deg,#fff,rgba(255,255,255,0.04));display:grid;place-items:center;cursor:pointer;transform-origin:center;transition:transform .28s, box-shadow .28s}
+    .char:hover{transform:translateY(-8px) rotate(-3deg);box-shadow:0 20px 40px rgba(120,40,200,0.18)}
+    .char svg{width:70px;height:70px}
+
+    /* gallery slider */
+    .gallery-wrap{margin-top:26px}
+    .slider{position:relative;overflow:hidden;border-radius:12px}
+    .slides{display:flex;transition:transform .6s cubic-bezier(.22,.9,.32,1)}
+    .slide{min-width:100%;user-select:none}
+    .slide img{display:block;width:100%;height:400px;object-fit:cover}
+
+    /* thumbnails grid */
+    .thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:12px}
+    .thumbs img{width:100%;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;opacity:.9;transition:transform .18s, opacity .18s}
+    .thumbs img:hover{transform:scale(1.03);opacity:1}
+
+    /* slider controls */
+    .controls{position:absolute;left:12px;right:12px;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none}
+    .controls button{pointer-events:all;background:rgba(0,0,0,0.35);border:0;padding:10px;border-radius:10px;color:white}
+
+    /* cards for info */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .feature{background:var(--glass);padding:18px;border-radius:12px;min-height:110px}
+
+    /* map & contact */
+    .map-wrap{margin-top:28px;border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+    .contact-row{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:18px;background:#fff;border-radius:12px;margin-top:18px}
+    .contact-row .left{font-weight:600}
+
+    footer.site-footer{margin-top:28px;padding:22px 0;background:#12001a;color:rgba(255,255,255,0.9)}
+    .footer-grid{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .socials{display:flex;gap:10px}
+    .socials a{background:rgba(255,255,255,.06);padding:8px;border-radius:10px;color:#fff;text-decoration:none}
+
+    /* modal */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:grid;place-items:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .18s}
+    .modal.open{opacity:1;pointer-events:all}
+    .modal .box{width:min(920px,94%);background:#fff;padding:18px;border-radius:12px}
+    .modal img{width:100%;height:420px;object-fit:cover;border-radius:8px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .slides img{height:300px}
+      .thumbs{grid-template-columns:repeat(4,1fr)}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .thumbs{grid-template-columns:repeat(3,1fr)}
+      .slides img{height:220px}
+      .features{grid-template-columns:1fr}
+      nav.primary{gap:8px}
+    }
+  </style>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">
+          <div class="badge" aria-hidden="true">
+            <!-- simple car seat SVG -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="16" height="18" rx="3" fill="white"/><path d="M8 7h8v3H8z" fill="rgba(138,43,255,0.9)"/></svg>
+          </div>
+          <div>
+            <h1>Erickel Car Seats & Covers</h1>
+            <div style="font-size:12px;opacity:.9">Custom fits — Fleet & Private</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <a href="tel:+27659239177" style="color:white;text-decoration:none;font-weight:700">+27 65 923 9177</a>
+          <a class="cta" href="#gallery">View Gallery</a>
+        </div>
+      </div>
 
-<header><h2>Erickel Car Seats & Covers</h2></header>
+      <nav class="primary" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="products.html">Services</a>
-<a href="details.html">Products</a>
-<a href="contacts.html">Contact</a>
-</nav>
-<title>About Us | Erickel Car Seats & Covers</title>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <h2>10 Years of Excellence</h2>
+          <p>Located in <strong>Three Rivers, Vereeniging</strong> — we craft durable, stylish and superior-fitting seat covers for cars, buses and trucks. Personalised logos, fleet branding and bespoke stitch work available.</p>
+          <a class="cta" href="#contact">Request Quote</a>
 
-</head>
+          <div style="margin-top:18px">
+            <div class="characters">
+              <div class="char" data-tooltip="Classic Leather" tabindex="0">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="18" height="20" rx="3" fill="url(#g)"/></svg>
+              </div>
+              <div class="char" data-tooltip="Sport Stitch" tabindex="0">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="10" r="7" fill="url(#g2)"/></svg>
+              </div>
+              <div class="char" data-tooltip="Waterproof" tabindex="0">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2s4 4 4 7-1.79 5-4 7-4-3-4-7 4-7 4-7z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<body>
+        <div>
+          <!-- slider -->
+          <div class="gallery-wrap" id="gallery">
+            <div class="slider" aria-roledescription="carousel">
+              <div class="slides">
+                <div class="slide"><img src="images/a.jpg" alt="Seat cover 1"></div>
+                <div class="slide"><img src="images/b.jpg" alt="Seat cover 2"></div>
+                <div class="slide"><img src="images/c.jpg" alt="Seat cover 3"></div>
+              </div>
+              <div class="controls">
+                <button id="prev" aria-label="Previous">❮</button>
+                <button id="next" aria-label="Next">❯</button>
+              </div>
+            </div>
 
-<header><h2>About Us</h2></header>
+            <!-- thumbnail grid beneath slider (click to open modal or jump) -->
+            <div class="thumbs" id="thumbs">
+              <img src="images/a.jpg" alt="Thumb 1" data-full="images/a.jpg">
+              <img src="images/b.jpg" alt="Thumb 2" data-full="images/b.jpg">
+              <img src="images/c.jpg" alt="Thumb 3" data-full="images/c.jpg">
+              <img src="images/d.jpg" alt="Thumb 4" data-full="images/d.jpg">
+              <img src="images/e.jpg" alt="Thumb 5" data-full="images/e.jpg">
+            </div>
 
-<section>
-<h2>10 Years of Excellence</h2>
-<p>
-Erickel Car Seats & Covers has proudly served South Africa for over a decade, 
-specializing in high-quality seat covers for Cars, Buses, and Trucks.  
-We customise any model and add personalised logos for businesses, taxis, fleets, and private vehicle owners.
-</p>
+            <div class="features">
+              <div class="feature"><strong>Custom Fit</strong><div style="opacity:.8;margin-top:6px">Tailored to model, seat type and style.</div></div>
+              <div class="feature"><strong>Fleet Branding</strong><div style="opacity:.8;margin-top:6px">Logo embroidery and colour matching.</div></div>
+              <div class="feature"><strong>Durable Materials</strong><div style="opacity:.8;margin-top:6px">Waterproof, UV resistant and easy to clean.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-Our factory in <strong>Three Rivers, Vereeniging</strong> produces durable, stylish and superior-fitting covers.
-We use premium materials designed for comfort, protection and long-lasting performance.
-</p>
-</section>
+    <!-- larger gallery modal -->
+    <div id="modal" class="modal" role="dialog" aria-hidden="true">
+      <div class="box">
+        <button id="closeModal" style="float:right;border:0;background:none;font-size:20px;">✕</button>
+        <img id="modalImg" src="" alt="Expanded photo">
+      </div>
+    </div>
 
+    <!-- contact + map -->
+    <section id="contact">
+      <div class="contact-row">
+        <div class="left">
+          <div style="font-size:18px;font-weight:700">Visit our factory</div>
+          <div style="opacity:.85;margin-top:6px">Cnr 22 Assegai & Umgeni Road, Three Rivers, Vereeniging, 1938</div>
+          <div style="margin-top:8px"><a href="tel:+27659239177">+27 65 923 9177</a> • <a href="mailto:info@erickel.co.za">info@erickel.co.za</a></div>
+        </div>
+        <div class="right" style="text-align:right">
+          <a href="https://wa.me/27659239177" target="_blank" rel="noopener noreferrer" class="cta">WhatsApp Us</a>
+        </div>
+      </div>
 
+      <div class="map-wrap" style="margin-top:12px">
+        <!-- live map embed (Google Maps) - lazy loaded when user scrolls here -->
+        <iframe id="gmaps" title="Erickel location" style="width:100%;height:420px;border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cnr+22+Assegai+%26+Umgeni+Road,+Three+Rivers,+Vereeniging,+1938&output=embed"></iframe>
+      </div>
+    </section>
 
+  </main>
 
-<div class="gallery">
-    <img src="images/a.jpg">
-    <img src="images/b.jpg">
-    <img src="images/c.jpg">
-    <img src="images/d.jpg">
-    <img src="images/e.jpg">
-    <img src="images/f.jpg">
-    <img src="images/g.jpg">
-    <img src="images/h.jpg">
-    <img src="images/i.jpg">
-    <img src="images/j.jpg">
-</div>
-  Contact: +27-65 923 9177  Address: Cnr 22 Assegai & Umgeni Road, Three Rivers, Vereening, 1938<br>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© 2025 Erickel Car Seats & Covers</div>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+  </footer>
 
-<footer>© 2025 Erickel Car Seats & Covers</footer>
+  <script>
+    // Simple slider implementation
+    (function(){
+      const slidesEl = document.querySelector('.slides');
+      const slides = document.querySelectorAll('.slide');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      let idx = 0, timer;
+      function go(i){ idx = (i + slides.length) % slides.length; slidesEl.style.transform = `translateX(${-idx*100}%)`; }
+      function start(){ timer = setInterval(()=>go(idx+1),4000); }
+      function stop(){ clearInterval(timer); }
+      prev.addEventListener('click',()=>{ stop(); go(idx-1); start(); });
+      next.addEventListener('click',()=>{ stop(); go(idx+1); start(); });
+      slidesEl.addEventListener('mouseenter', stop);
+      slidesEl.addEventListener('mouseleave', start);
+      go(0); start();
 
-</body>
-</html>
-
-
-
-
-
-
-
+      // thumbnails open modal
+      const thumbs = document.getElementById('thumbs');
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImg');
+      const closeModal = document.getElementById('closeModal');
+      thumbs.addEventListener('click',(e)=>{
+        const t = e.target.closest('img');
+        if(!t) return;
+        const src = t.dataset.full || t.src;
+        modalImg.src = src; modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+      });
+      closeModal.addEventListener('click',()=>{ modal.classList.remove('open'); modal.setAttri
